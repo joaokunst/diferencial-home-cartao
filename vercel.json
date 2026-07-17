@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "diferencial-home-cartao.vercel.app"
+        }
+      ],
+      "destination": "https://diferencialhome.com.br/:path*",
+      "permanent": true
+    }
+  ]
+}
