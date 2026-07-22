@@ -172,6 +172,33 @@
   .rev .src{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
   .rev-all{display:inline-block;margin-top:40px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:6px}
 
+  /* Clube Diferencial */
+  .club{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(16,16,14,.98) 0%,rgba(16,16,14,.94) 58%,rgba(16,16,14,.76) 100%),url('assets/projects/statement.webp') center right/cover no-repeat}
+  .club::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-210px;border:1px solid rgba(201,176,136,.16);border-radius:50%}
+  .club::after{content:"";position:absolute;width:360px;height:360px;right:-100px;top:-130px;border:1px solid rgba(201,176,136,.1);border-radius:50%}
+  .club .inner{position:relative;z-index:2}
+  .club-intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(250px,.7fr);gap:70px;align-items:end}
+  .club-mark{border-left:1px solid var(--line);padding-left:50px}
+  .club-mark .upto{font-family:var(--serif);font-size:clamp(76px,10vw,128px);line-height:.8;color:var(--gold)}
+  .club-mark .upto span{font-family:var(--sans);font-size:16px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:18px}
+  .club-mark p{color:#cfc8bc;margin-top:24px;max-width:320px}
+  .club-levels{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .club-level{padding:28px 24px;border-left:1px solid var(--line)}
+  .club-level:first-child{border-left:0}
+  .club-level .order{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .club-level strong{display:block;font-family:var(--serif);font-size:46px;line-height:1;color:var(--gold);font-weight:400;margin:12px 0 8px}
+  .club-level p{font-size:13px;color:var(--muted)}
+  .club-how{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;margin-top:64px}
+  .club-how h3{font-family:var(--serif);font-size:34px;font-weight:400}
+  .club-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .club-step{border-top:1px solid var(--line);padding-top:18px}
+  .club-step .n{color:var(--gold);font-family:var(--serif);margin-bottom:10px}
+  .club-step h4{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:8px}
+  .club-step p{font-size:14px;color:var(--muted)}
+  .club-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:44px}
+  .club-rules{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:6px}
+  .club-note{font-size:12px;color:var(--muted);margin-top:26px;max-width:900px}
+
   /* FAQ */
   .faq-item{border-top:1px solid var(--line)}
   .faq-item:last-child{border-bottom:1px solid var(--line)}
@@ -206,7 +233,11 @@
     .burger{display:flex}
     nav.main.open{display:flex;position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:0;background:rgba(11,11,10,.97);backdrop-filter:blur(14px);padding:10px 0;border-bottom:1px solid var(--line)}
     nav.main.open a{padding:16px 28px;border-top:1px solid var(--line)}
-    .essence .grid,.amb-grid,.cond .grid,.steps,.rev-grid{grid-template-columns:1fr}
+    .essence .grid,.amb-grid,.cond .grid,.steps,.rev-grid,.club-intro,.club-how,.club-steps{grid-template-columns:1fr}
+    .club-mark{border-left:0;border-top:1px solid var(--line);padding:34px 0 0}
+    .club-levels{grid-template-columns:repeat(2,1fr)}
+    .club-level:nth-child(3){border-left:0;border-top:1px solid var(--line)}
+    .club-level:nth-child(4){border-top:1px solid var(--line)}
     .cond .item{border-left:0;border-top:1px solid var(--line);padding:26px 0}
     .cond .item:first-child{border-top:0}
     section{padding:80px 0}
@@ -229,6 +260,7 @@
     <a href="#ambientes">Ambientes</a>
     <a href="#processo">Processo</a>
     <a href="#avaliacoes">Avaliações</a>
+    <a href="#clube">Clube</a>
     <a href="#sobre">Quem somos</a>
     <a href="#faq">FAQ</a>
   </nav>
@@ -391,11 +423,54 @@
   </div>
 </section>
 
+<!-- CLUBE DIFERENCIAL -->
+<section class="club" id="clube">
+  <div class="wrap inner">
+    <div class="club-intro">
+      <div class="reveal">
+        <p class="eyebrow sec-eyebrow">05 — Clube Diferencial</p>
+        <h2 class="title serif">Uma boa indicação<br /><span class="accent italic">merece ser reconhecida.</span></h2>
+        <p class="lead">Indique a Diferencial Home a pessoas que também valorizam ambientes feitos sob medida. Quando uma indicação se transforma em um novo projeto, você recebe crédito interno para usar em uma próxima contratação.</p>
+      </div>
+      <div class="club-mark reveal">
+        <div class="upto"><span>Ganhe até</span>4%</div>
+        <p>em crédito interno, calculado sobre o valor líquido do contrato da pessoa indicada.</p>
+      </div>
+    </div>
+
+    <div class="club-levels reveal" aria-label="Percentuais do Clube Diferencial">
+      <div class="club-level"><span class="order">1ª indicação</span><strong>2%</strong><p>do contrato indicado</p></div>
+      <div class="club-level"><span class="order">2ª indicação</span><strong>3%</strong><p>do contrato indicado</p></div>
+      <div class="club-level"><span class="order">3ª indicação</span><strong>4%</strong><p>do contrato indicado</p></div>
+      <div class="club-level"><span class="order">4ª em diante</span><strong>4%</strong><p>por contrato indicado</p></div>
+    </div>
+
+    <div class="club-how reveal">
+      <div>
+        <p class="eyebrow sec-eyebrow">Como participar</p>
+        <h3>Recomende.<br />O reconhecimento vem depois.</h3>
+      </div>
+      <div>
+        <div class="club-steps">
+          <div class="club-step"><div class="n">01</div><h4>Recomende</h4><p>Apresente a Diferencial Home a alguém interessado em móveis planejados.</p></div>
+          <div class="club-step"><div class="n">02</div><h4>Identifique</h4><p>No primeiro atendimento, a pessoa informa quem fez a indicação.</p></div>
+          <div class="club-step"><div class="n">03</div><h4>Receba</h4><p>Com o contrato pago e validado, o crédito é constituído em seu nome.</p></div>
+        </div>
+        <div class="club-actions">
+          <a class="btn primary" href="#" data-referral>Quero participar ↗</a>
+          <a class="club-rules" href="assets/regulamento-clube-diferencial.pdf" target="_blank" rel="noopener">Ler regulamento completo ↗</a>
+        </div>
+        <p class="club-note">Créditos válidos por 12 meses e utilizáveis em até 20% de uma nova contratação. Participação exclusiva para clientes elegíveis, conforme o regulamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
     <div class="reveal">
-      <p class="eyebrow sec-eyebrow">05 — Dúvidas</p>
+      <p class="eyebrow sec-eyebrow">06 — Dúvidas</p>
       <h2 class="title serif">Antes de começar<br /><span class="accent italic">seu projeto.</span></h2>
       <p class="lead">Algumas respostas para tornar a primeira conversa mais clara.</p>
     </div>
@@ -459,6 +534,12 @@
   var WA_URL = "https://api.whatsapp.com/send/?phone=5565993180004&text=Ol%C3%A1%2C+quero+conversar+sobre+meu+projeto.&type=phone_number&app_absent=0";
   document.querySelectorAll('[data-wa]').forEach(function(a){
     a.setAttribute('href', WA_URL);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+  var REFERRAL_URL = "https://api.whatsapp.com/send/?phone=5565993180004&text=Ol%C3%A1%21+Sou+cliente+da+Diferencial+Home+e+quero+saber+como+participar+do+Clube+Diferencial.&type=phone_number&app_absent=0";
+  document.querySelectorAll('[data-referral]').forEach(function(a){
+    a.setAttribute('href', REFERRAL_URL);
     a.setAttribute('target', '_blank');
     a.setAttribute('rel', 'noopener');
   });
